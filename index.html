@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Javascript task 2</title>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script src="/assets/js/scripts.js" defer></script>
+</head>
+<body>
+    <main>
+        <section>
+            <form>            
+                <h1>Student management platform</h1>
+                <div>
+                    <label>Student name</label>
+                    <input class="input-field" id="student-name" type="text">
+                </div>
+                <div>
+                    <label>Student mark</label>
+                    <input class="input-field" id="student-mark" type="number" min="0" max="100">
+                </div>
+               <button type="submit" onclick="submitMark(event)">Capture student mark</button>
+            </form>
+        </section>
+        <section class="results-section">
+            <h2>Results</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Mark</th>
+                    <th>Result</th>
+                    <th>Grade</th>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
