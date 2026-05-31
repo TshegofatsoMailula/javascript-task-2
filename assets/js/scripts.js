@@ -6,6 +6,14 @@ function submitMark(event)
     studentMark = parseInt(studentMark);
     let result = "FAIL";
     let grade = "fail";
+    if(!studentName)
+    {
+        alert("Student name is required");
+    }
+    if(!studentMark || studentMark < 0 || student > 100)
+    {
+        alert("Invalid mark entered");
+    }
     if(studentMark > 0 && studentMark <= 49)
     {
         result = "FAIL";
