@@ -10,11 +10,11 @@
         <section>
             <form>            
                 <h1>Student management platform</h1>
-                <div>
+                <div class="input-section">
                     <label>Student name</label>
                     <input class="input-field" id="student-name" type="text">
                 </div>
-                <div>
+                <div class="input-section">
                     <label>Student mark</label>
                     <input class="input-field" id="student-mark" type="number" min="0" max="100">
                 </div>
@@ -23,14 +23,14 @@
         </section>
         <section class="results-section">
             <h2>Results</h2>
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Mark</th>
-                    <th>Result</th>
-                    <th>Grade</th>
-                </tr>
-            </table>
+            <ul class="table-head">
+                <li>Name</li>
+                <li>Mark</li>
+                <li>Result</li>
+                <li>Grade</li>
+            </ul>
+            <ul id="student-results"></ul>
+            <p id="no-results"></p>
         </section>
     </main>
 </body>
