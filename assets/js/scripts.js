@@ -24,6 +24,7 @@ function submitMark(event)
     }
     let result = "FAIL";
     let grade = "fail";
+    let textColor = "red";
     const student_data = {
         name: studentName,
         mark: studentMark
@@ -52,23 +53,29 @@ function submitMark(event)
     {
         result = "PASS";
         grade = "Pass";
+        textColor = "green";
     }
     else if(studentMark>= 65 && studentMark<= 79)
     {
         result = "PASS";
         grade = "Merit";
+        textColor = "green";
     }
     else if(studentMark>= 80 && studentMark<= 100)
     {
         result = "PASS";
         grade = "Distinction";
+        textColor = "green";
     }
     row.innerHTML = `<span>${studentName}</span><span>${studentMark}</span><span>${result}</span><span>${grade}</span>`;
     table.appendChild(row);
     students = JSON.stringify(students);
     
     localStorage.setItem("students",students);
-    
+    document.getElementById("display-result").innerHTML = result;
+    document.getElementById("display-result").style.color = textColor;
+    document.getElementById("display-result").style.fontWeight = "bold";
+    document.querySelector(".result-section").style.display = "block";
     console.log(`The student name is ${studentName} and the student mark is ${studentMark} and the result is ${result} - ${grade}`);
 }
 function loadStudents()
@@ -84,7 +91,6 @@ function loadStudents()
         const row = document.createElement("li");
         let result = "FAIL";
         let grade = "fail";
-            console.log(student);
         //Check mark and determine grade
         if(student.mark > 0 && student.mark <= 49)
         {

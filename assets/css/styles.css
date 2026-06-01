@@ -13,8 +13,13 @@ body{
     transition: 0.3s;
     width: 80%;
 }
-.input-section{
+.input-section, .result-section{
     margin: 12px 0;
+}
+.result-section{
+   padding: 12px;
+   background-color: #abc5df;
+   display: none;
 }
 form, .results-section
 {
